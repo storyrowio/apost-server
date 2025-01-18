@@ -1,0 +1,87 @@
+{
+  "users": [
+    {
+      "id": "86d03ea7-a43a-48d7-b392-71881dd91481",
+      "name": "Admin",
+      "email": "admin@apost.io",
+      "password": "admin",
+      "active": true,
+      "isAdminSystem": true
+    }
+  ],
+  "permissions": [
+    {"id": "user:create", "name": "User Create"},
+    {"id": "user:read", "name": "User Read"},
+    {"id": "user:update", "name": "User Update"},
+    {"id": "user:delete", "name": "User Delete"},
+    {"id": "role:create", "name": "Role Create"},
+    {"id": "role:read", "name": "Role Read"},
+    {"id": "role:update", "name": "Role Update"},
+    {"id": "role:delete", "name": "Role Delete"},
+    {"id": "setting:create", "name": "Setting Create"},
+    {"id": "setting:read", "name": "Setting Read"},
+    {"id": "setting:update", "name": "Setting Update"},
+    {"id": "setting:delete", "name": "Setting Delete"}
+  ],
+  "roles": [
+    {
+      "id": "795d1bc5-591b-4c08-a716-591c9ad75c83",
+      "name": "System Admin",
+      "code": "systemadmin",
+      "permissions": ["all"]
+    }
+  ],
+  "settings": [
+    {
+      "id": "b0714389-8d36-44a9-9486-3389f6882f8a",
+      "code": "profile",
+      "name": "APost Profile",
+      "setting": {
+        "name": "Apost",
+        "email": "cs@apost.com"
+      },
+      "type": "general",
+      "status": true,
+      "isDefault": true
+    },
+    {
+      "id": "44d28c27-79fd-48e1-bbb1-314fe2a946b0",
+      "code": "cloudinary",
+      "name": "Cloudinary",
+      "setting": {
+        "cloudinaryCloudName": "",
+        "cloudinaryKey": "",
+        "cloudinarySecret": ""
+      },
+      "type": "storage",
+      "status": true,
+      "isDefault": true
+    },
+    {
+      "id": "0de44589-1e3d-4fc6-905f-8c8a891f4a7c",
+      "code": "stripe",
+      "name": "Stripe",
+      "setting": {
+        "STRIPE_SECRET_KEY": ""
+      },
+      "type": "payment",
+      "status": true,
+      "isDefault": true
+    },
+    {
+      "id": "0de44589-1e3d-4fc6-905f-8c8a891f4a7c",
+      "code": "mail",
+      "name": "SMTP Mail",
+      "setting": {
+        "MAIL_MAILER": "smtp",
+        "MAIL_HOST": "smtp.gmail.com",
+        "MAIL_PORT": "587",
+        "MAIL_USERNAME": "storyrowio@gmail.com",
+        "MAIL_APP_PASSWORD": "wcsa oeuz eayd xyhw"
+      },
+      "type": "mail",
+      "status": true,
+      "isDefault": true
+    }
+  ]
+}
