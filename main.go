@@ -106,6 +106,8 @@ func main() {
 
 	s := gocron.NewScheduler()
 	//s.Every(5).Seconds().Do(controllers.RunAutoPost)
-	s.Every(1).Sunday().At("09:00").Do(controllers.RunAutoPost)
+	log.Println(time.Now())
+	//s.Every(10).Seconds().Do(controllers.RunAutoPost)
+	s.Every(1).Tuesday().At("09:00").Do(controllers.RunAutoPost)
 	<-s.Start()
 }

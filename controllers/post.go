@@ -24,6 +24,11 @@ func RunAutoPost() {
 				Content: res.Choices[0].Message.Content,
 			})
 
+			_, err := services.DeleteTopic(topic.Id)
+			if err != nil {
+				log.Println("Error Delete Topic:", err.Error())
+			}
+
 			log.Println("Create post for " + app.Name + ": success")
 		} else {
 			log.Println("Create post for " + app.Name + ": failed")

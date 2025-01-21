@@ -9,7 +9,6 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	"strconv"
 )
 
 const TopicCollection = "topics"
@@ -105,8 +104,6 @@ func CreateManyTopic(params []models.Topic) (bool, error) {
 
 func GetTopicForAutoPost(appId string) models.Topic {
 	topics := GetTopics(bson.M{"appId": appId}, nil)
-	numb := lib.RandomNumber(len(topics))
-	index, _ := strconv.Atoi(numb)
-
-	return topics[index]
+	numb := lib.RandomNumber(0, len(topics)-1)
+	return topics[numb]
 }

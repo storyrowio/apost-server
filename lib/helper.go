@@ -28,16 +28,8 @@ func RandomChar(length int) string {
 	return string(b)
 }
 
-func RandomNumber(length int) string {
-	b := make([]byte, length)
-	for i := range b {
-		if i == 0 {
-			b[i] = charset[seededRand.Intn(25)]
-		} else {
-			b[i] = charset[seededRand.Intn(len(numberset))]
-		}
-	}
-	return string(b)
+func RandomNumber(min, max int) int {
+	return seededRand.Intn(max-min) + min
 }
 
 func SlugGenerator(name string) string {
