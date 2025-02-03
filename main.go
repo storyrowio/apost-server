@@ -108,6 +108,6 @@ func main() {
 	//s.Every(5).Seconds().Do(controllers.RunAutoPost)
 	log.Println(time.Now())
 	//s.Every(10).Seconds().Do(controllers.RunAutoPost)
-	s.Every(1).Tuesday().At("09:00").Do(controllers.RunAutoPost)
+	s.Every(1).Monday().At("09:30").Do(controllers.RunAutoPost)
 	<-s.Start()
 }
